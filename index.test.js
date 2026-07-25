@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest"
-import { getMiddleCharacter, multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
+import { getHighestAndLowestNum, getMiddleCharacter, multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
 
 /*
 
@@ -77,6 +77,10 @@ describe("removeVowels", () => {
 
 */
 
+/*
+
+6. get middle character
+
 describe("getMiddleCharacter", () => {
     it("should get the middle character of word", () => {
         expect(getMiddleCharacter("test")).toBe("es")
@@ -85,3 +89,20 @@ describe("getMiddleCharacter", () => {
         expect(getMiddleCharacter("A")).toBe("A")
     })
 })
+
+*/
+
+/*
+
+7. get highest and lowest done
+
+describe("getHightestAndLowestNum", () => {
+    it("should return object contains highest and lowest nums of given num string", () => {
+        expect(getHighestAndLowestNum("1 2 3 4 5")).toBe("5 1")
+        expect(getHighestAndLowestNum("1 2 -3 4 5")).toBe("5 -3")
+        expect(getHighestAndLowestNum("1 9 3 4 -5")).toBe("9 -5")
+        expect(getHighestAndLowestNum("0 -214 542")).toBe("542 -214")
+    })
+})
+
+*/

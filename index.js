@@ -122,4 +122,33 @@ export function getMiddleCharacter(word) {
     }
 }
 
-getMiddleCharacter("test")
+/*
+
+16. Highest and Lowest
+
+Given a string of space-separated numbers, write a function that returns the highest and lowest numbers. There will always be at least one number in the input string.
+
+*/
+
+export function getHighestAndLowestNum(string) {
+    let highestNum = Number(string[0])
+    let lowestNum = Number(string[0])
+
+    console.log("starting highest Num", highestNum)
+    console.log("starting lowest Num", lowestNum)
+
+    const nums = string.split(" ")
+
+    console.log("nums array", nums)
+
+    for (let i = 1; i < nums.length; i++) {
+        if (Number(nums[i]) > highestNum) highestNum = Number(nums[i])
+
+        if (Number(nums[i]) < lowestNum) lowestNum = Number(nums[i])
+    }
+
+    console.log("final highest num", highestNum)
+    console.log("final lowest num", lowestNum)
+
+    return `${highestNum} ${lowestNum}`
+}
