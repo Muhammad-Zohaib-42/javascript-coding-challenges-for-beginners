@@ -62,3 +62,21 @@ The first century spans from the year 1 up to and including the year 100, The se
 export function whichCentury(year) {
     return Math.ceil(year / 100)
 }
+
+/*
+
+8. Vowel Count
+
+Return the number (count) of vowels (a, e, i, o, u) in the given string. The input string will only consist of lower case letters and/or spaces.
+
+*/
+
+export function vowelCount(text) {
+    let vowels = 0
+
+    for (let i = 0; i < text.length; i++) {
+        if ("aeiou".includes(text[i].toLowerCase())) vowels++
+    }
+
+    return vowels
+}

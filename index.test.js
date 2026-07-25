@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest"
-import { multiplesOf3Or5, past, whichCentury } from "."
+import { multiplesOf3Or5, past, vowelCount, whichCentury } from "."
 
 /*
 
@@ -49,3 +49,12 @@ describe("whichCentury", () => {
 })
 
 */
+
+describe("calculateVowelsCount", () => {
+    it("should return the vowels count in given text", () => {
+        expect(vowelCount("my pyx")).toBe(0)
+        expect(vowelCount("pear tree")).toBe(4)
+        expect(vowelCount("abracadabra")).toBe(5)
+        expect(vowelCount("o a kak ushakov lil vo kashu kakao")).toBe(13)
+    })
+})
