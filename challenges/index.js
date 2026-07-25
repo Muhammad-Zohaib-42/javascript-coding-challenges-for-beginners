@@ -181,4 +181,30 @@ export function getShortestWordLength(string) {
     console.log(Math.min(...wordLengthsArray))
 }
 
-getShortestWordLength('Lets all go on holiday somewhere very cold')
+/*
+
+21. Bit Counting
+
+Write a function that takes an integer as input, and returns the number of bits that are equal to 1 in the binary representation of that number. You can guarantee that input is non-negative. For example the binary representation of 1234 is 10011010010, so the function should return 5 in this case.
+
+*/
+
+function bigCounting(number) {
+    let binary = ''
+    let bitCount = 0
+
+    while (number > 1) {
+        binary += number == 2 ? 1 : number % 2
+        number = (number / 2).toFixed(2)
+
+        console.log(number)
+    }
+    
+    for (let i = 0; i < binary.length; i++) {
+        if (Number(binary[i]) == 1) bitCount++
+    }
+
+    console.log(binary, bitCount)
+}
+
+bigCounting(9)
