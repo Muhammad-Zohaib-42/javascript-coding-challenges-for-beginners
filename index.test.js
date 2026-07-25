@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest"
-import { multiplesOf3Or5, past, vowelCount, whichCentury } from "."
+import { multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
 
 /*
 
@@ -50,11 +50,23 @@ describe("whichCentury", () => {
 
 */
 
+/*
+
+4. calculate the vowels in text
+
 describe("calculateVowelsCount", () => {
     it("should return the vowels count in given text", () => {
         expect(vowelCount("my pyx")).toBe(0)
         expect(vowelCount("pear tree")).toBe(4)
         expect(vowelCount("abracadabra")).toBe(5)
         expect(vowelCount("o a kak ushakov lil vo kashu kakao")).toBe(13)
+    })
+})
+
+*/
+
+describe("removeVowels", () => {
+    it("should remove vowels from text", () => {
+        expect(removeVowels("This website is for losers LOL!")).toBe("Ths wbst s fr lsrs LL!")
     })
 })
