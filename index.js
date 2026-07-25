@@ -8,24 +8,16 @@ Note: If the number is a multiple of both 3 and 5, only count it once. Also, if 
 
 */
 
-function multiplesOf3Or5(number) {
+export function multiplesOf3Or5(number) {
     const multiplesOf3And5 = []
 
     if (number <= 2) {
-        console.log(0)
-        return
+        return 0
     }
 
     for (let i = 3; i < number; i++) {
         if (i % 3 == 0 || i % 5 == 0) multiplesOf3And5.push(i)
     }
 
-    const sum = multiplesOf3And5.reduce((acc, curr) => acc + curr, 0)
-    console.log(sum)
+    return multiplesOf3And5.reduce((acc, curr) => acc + curr, 0)
 }
-
-multiplesOf3Or5(0)
-multiplesOf3Or5(-15)
-multiplesOf3Or5(10)
-multiplesOf3Or5(20)
-multiplesOf3Or5(200)
