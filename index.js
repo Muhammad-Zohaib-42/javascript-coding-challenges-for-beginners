@@ -152,3 +152,33 @@ export function getHighestAndLowestNum(string) {
 
     return `${highestNum} ${lowestNum}`
 }
+
+/*
+
+17. Descending Order
+
+Write a function that takes any non-negative integer as an argument and returns it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+*/
+
+export function descendingOrder(number) {
+    return Number(`${number}`.split("").sort((a,b) => Number(b) - Number(a)).join(""))
+}
+
+/*
+
+20. Shortest Word
+
+Given a non-empty string of words, return the length of the shortest word(s).
+
+*/
+
+export function getShortestWordLength(string) {
+    const wordsArray = string.split(" ")
+    const wordLengthsArray = wordsArray.map(word => word.length)
+    console.log(wordsArray)
+    console.log(wordLengthsArray)
+    console.log(Math.min(...wordLengthsArray))
+}
+
+getShortestWordLength('Lets all go on holiday somewhere very cold')

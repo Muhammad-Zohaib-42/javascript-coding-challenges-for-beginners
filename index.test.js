@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest"
-import { getHighestAndLowestNum, getMiddleCharacter, multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
+import { descendingOrder, getHighestAndLowestNum, getMiddleCharacter, multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
 
 /*
 
@@ -102,6 +102,20 @@ describe("getHightestAndLowestNum", () => {
         expect(getHighestAndLowestNum("1 2 -3 4 5")).toBe("5 -3")
         expect(getHighestAndLowestNum("1 9 3 4 -5")).toBe("9 -5")
         expect(getHighestAndLowestNum("0 -214 542")).toBe("542 -214")
+    })
+})
+
+*/
+
+/*
+
+8. descending order
+
+describe("descendingOrder", () => {
+    it("should return descending order", () => {
+        expect(descendingOrder(0)).toBe(0)
+        expect(descendingOrder(1)).toBe(1)
+        expect(descendingOrder(1021)).toBe(2110)
     })
 })
 
