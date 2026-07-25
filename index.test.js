@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest"
-import { multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
+import { getMiddleCharacter, multiplesOf3Or5, past, removeVowels, vowelCount, whichCentury } from "."
 
 /*
 
@@ -65,8 +65,23 @@ describe("calculateVowelsCount", () => {
 
 */
 
+/*
+
+5. remove vowels from text
+
 describe("removeVowels", () => {
     it("should remove vowels from text", () => {
         expect(removeVowels("This website is for losers LOL!")).toBe("Ths wbst s fr lsrs LL!")
+    })
+})
+
+*/
+
+describe("getMiddleCharacter", () => {
+    it("should get the middle character of word", () => {
+        expect(getMiddleCharacter("test")).toBe("es")
+        expect(getMiddleCharacter("testing")).toBe("t")
+        expect(getMiddleCharacter("middle")).toBe("dd")
+        expect(getMiddleCharacter("A")).toBe("A")
     })
 })

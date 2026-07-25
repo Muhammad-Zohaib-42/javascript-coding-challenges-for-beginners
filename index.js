@@ -100,3 +100,26 @@ export function removeVowels(text) {
 
     return newText
 }
+
+/*
+
+11. Get the Middle Character
+
+Given a word, your job is to return the middle character(s) of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+*/
+
+export function getMiddleCharacter(word) {
+    const isEven = word.length % 2 == 0
+    const wordHalf = Math.floor(word.length / 2)
+
+    if (word.length <= 2) return word
+
+    if (isEven) {
+        return word.slice(wordHalf - 1, (wordHalf - 1) + 2)
+    } else {
+        return word.slice(wordHalf, wordHalf + 1)
+    }
+}
+
+getMiddleCharacter("test")
