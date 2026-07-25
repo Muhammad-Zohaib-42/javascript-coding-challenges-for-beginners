@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest"
-import { multiplesOf3Or5, past } from "."
+import { multiplesOf3Or5, past, whichCentury } from "."
 
 /*
 
@@ -29,6 +29,22 @@ describe("past", () => {
         expect(past(1, 0, 0)).toBe(3600000)
         expect(past(1, 0, 1)).toBe(3601000)
         expect(past(1, 1, 1)).toBe(3661000)
+    })
+})
+
+*/
+
+/*
+
+3. calculate the current century
+
+describe("whichCentury", () => {
+    it("should return current century", () => {
+        expect(whichCentury(1705)).toBe(18)
+        expect(whichCentury(1900)).toBe(19)
+        expect(whichCentury(1601)).toBe(17)
+        expect(whichCentury(2000)).toBe(20)
+        expect(whichCentury(85)).toBe(1)
     })
 })
 
