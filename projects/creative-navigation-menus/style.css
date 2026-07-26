@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100vh;
+    background-color: rgb(15, 17, 19);
+    display:flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+a {
+    padding: .7rem 2rem;
+    text-decoration-line: none;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+}
+/* header 1 */
+.header1 a::before,
+.header1 a::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    transition: all .6s ease;
+}
+.header1 a::before{
+    top: 0;
+    left: 0;
+}
+.header1 a::after{
+    bottom: 0;
+    right: 0;
+}
+.header1 a:hover::after,
+.header1 a:hover::before{
+    width:100%;
+}
+/* header 2 */
+.header2 a{
+    padding-block: .6rem;
+}
+.header2 a::before,
+.header2 a::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: crimson;
+    position: absolute;
+    transition: all .6s ease;
+    left: 0;
+    opacity: 0;
+}
+.header2 a::before{
+    top: -18px;
+}
+.header2 a::after{
+    bottom: -16px;
+}
+.header2 a:hover::before {
+    top: -8px;
+    opacity: 1;
+}
+.header2 a:hover::after {
+    bottom: -8px;
+    opacity: 1;
+}
+.header2 a .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    background-color: crimson;
+    height:100%;
+    width:100%;
+    color: white;
+    transform: scale(0);
+    z-index: -10;
+    transition: all .6s ease;
+}
+.header2 a:hover .overlay {
+    transform: scale(1);
+}
+/* header 3 */
+.header3 a{
+    background-color: rgb(15, 17, 19);
+}
+.header3 a::after,
+.header3 a::before {
+    content: "";
+    position:absolute;
+    height: 9px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    opacity: 0;
+    transition: all .4s ease;
+}
+.header3 a::before{
+    right: 20px;
+    top: 6px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+.header3 a::after{
+    bottom: 6px;
+    left: 20px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.header3 a:hover::before{
+    right: 12px;
+    top: 0;
+    opacity: 1;
+}
+.header3 a:hover::after{
+    left: 12px;
+    bottom: 0;
+    opacity: 1;
+}

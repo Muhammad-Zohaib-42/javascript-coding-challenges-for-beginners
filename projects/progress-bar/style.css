@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width:100%;
+}
+section{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ghostwhite;
+    isolation: isolate;
+}
+section>div{
+    display:flex;
+    flex-direction: column;
+    gap:5rem;
+}
+.btns-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.5rem;
+}
+button{
+    padding:.6rem 1.5rem;
+    background-color: darkred;
+    color:white;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    border-radius: 100px;
+    font-size:17px;
+}
+.top{
+    width:400px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bar-circle{
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    border: 3px solid rgb(255, 201, 201);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-weight: 700;
+    font-size:18px;
+    transition: all .6s ease;
+    position:relative;
+}
+.bar-circle.active{
+    border-color: red;
+}
+button:disabled{
+    background-color: rgb(206, 205, 205);
+    cursor: not-allowed;
+}
+.bar{
+    height:8px;
+    width:100px;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 50%;
+    background-color: black;
+    z-index: -1;
+}
+.bar-inner{
+    height:100%;
+    width:0%;
+    background-color:red;
+    transition:all .3s ease;
+}
+.bar.active .bar-inner{
+    width:100%;
+}
