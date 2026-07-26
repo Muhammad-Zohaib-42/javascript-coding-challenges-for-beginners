@@ -67,7 +67,7 @@ button.btn1{
     letter-spacing: 1px;
     border: none;
     outline: none;
-    background-color: brown;
+    background-color: darkred;
     color: white;
     overflow: hidden;
     transition: all .3s ease;
@@ -82,8 +82,8 @@ button.btn1{
         height: 100%;
         width: 100%;
         left: 0;
-        background-color: black;
-        color: gold;
+        background-color: darkgreen;
+        color: white;
         place-content: center;
         top: -100%;
         font-weight: 600;
@@ -99,7 +99,7 @@ button.btn2{
     border: none;
     outline: none;
     padding: .7rem 2rem;
-    background-color: brown;
+    background-color: darkred;
     color: white;
     position: relative;
     transform-style: preserve-3d;
@@ -124,7 +124,7 @@ button.btn2::after {
 }
 
 button.btn2::after {
-    background-color: green;
+    background-color: darkblue;
     color: white;
     transition: all .2s .2s ease;
 }
@@ -132,13 +132,14 @@ button.btn2::after {
 button.btn2:hover::after,
 button.btn2:hover::before {
     transform: rotateX(0deg);
+    height:101%;
 }
 /* btn 3 */
 button.btn3{
     padding: .7rem 2rem;
     border: none;
     outline: none;
-    background-color: green;
+    background-color: darkblue;
     color: white;
     font-size: 1.3rem;
     font-weight: normal;
@@ -149,7 +150,7 @@ button.btn3{
     &::after{
         content: "";
         position: absolute;
-        background-color: rgba(0, 0, 255, 0.4);
+        background-color: rgba(0, 38, 255, 0.4);
         height: 100%;
         width: 100%;
         z-index: -1;
@@ -162,7 +163,6 @@ button.btn3{
     }
 
     &::after{
-        background-color: rgba(255, 0, 0, 0.4);
         bottom: -4px;
         right: -4px;
     }
@@ -176,13 +176,14 @@ button.btn3{
         height: 25%;
         left: 0;
         clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+        background-color:blue;
     }
 
     &:hover::after{
         right: 0;
         height: 25%;
         clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
-
+        background-color: blue;
     }
 }
 /* btn 4 */
@@ -196,7 +197,7 @@ button.btn4{
     font-weight: 400;
     border:none;
     outline:none;
-    background-color:blue;
+    background-color:tomato;
     color:white;
     border: 2px solid ghostwhite;
     position:relative;
@@ -207,7 +208,7 @@ button.btn4{
         position:absolute;
         width:15%;
         height:50%;
-        background-color: blue;
+        background-color: tomato;
         z-index: -1;
     }
     
@@ -227,5 +228,36 @@ button.btn4{
         bottom:-5px;
         right:-5px;
         transition:all .3s ease;
+    }
+}
+/* btn 5 */
+button.btn5{
+    padding:.8rem 2rem;
+    border-radius: 100px;
+    font-size: 1.1rem;
+    font-weight:bold;
+    border:none;
+    outline:none;
+    background-color: crimson;
+    color:white;
+    position:relative;
+
+    &::before{
+        content:"";
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color: crimson;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transform-origin: center;
+        border-radius:inherit;
+        transition:all .5s ease-in-out;
+    }
+
+    &:hover::before{
+        scale: 1.3;
+        opacity:0;
     }
 }
