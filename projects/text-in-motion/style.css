@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,
+body{
+    height:100%;
+    width:100%;
+}
+body{
+    background-color: rgb(15, 15, 15);
+    color: rgb(252, 241, 241);
+}
+section{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.title-container{
+    color: chartreuse;
+    height: 50px;
+    overflow-y: hidden;
+}
+.title-wrapper{
+    transition:all .3s ease;
+}
+h1{
+    line-height: 50px;
+}
