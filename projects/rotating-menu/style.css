@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkred;
+}
+.nav-container{
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+nav{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    border-radius: 50%;
+    transform: rotate(360deg) scale(0);
+    transform-origin: center;
+    transition: all .6s ease;
+}
+.nav-container.grow nav{
+    transform: rotate(0deg) scale(1);
+}
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.toggle-btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(0deg);
+    z-index: 1000;
+    transition: all .3s ease;
+}
+.nav-container.grow .toggle-btn{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.link{
+    position: absolute;
+}
+.x-center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.y-center{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.link.top{
+    top: 20px;
+}
+.link.bottom{
+    bottom: 20px;
+}
+.link.left{
+    left: 20px;
+}
+.link.right{
+    right: 20px;
+}

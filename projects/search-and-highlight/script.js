@@ -16,3 +16,16 @@ form.addEventListener("submit", e => {
     p.innerHTML = originalText.replaceAll(regex, "<mark>$1</mark>")
 })
 
+input.addEventListener("input", e => {
+    const searchQuery = input.value.trim()
+
+    if (!searchQuery) {
+        p.innerHTML = originalText
+        return
+    }
+
+    const regex = new RegExp(`(${searchQuery})`, 'gi')
+
+    p.innerHTML = originalText.replaceAll(regex, "<mark>$1</mark>")
+})
+
