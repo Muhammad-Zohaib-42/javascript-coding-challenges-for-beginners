@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,
+body{
+    height:100%;
+    width:100%;
+}
+
+.custom-cursor{
+    height:8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+.custom-cursor-2{
+    height:22px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid black;
+    transition: all .1s ease;
+    position: absolute;
+}
