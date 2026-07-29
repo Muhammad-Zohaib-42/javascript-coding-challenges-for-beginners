@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+    perspective: 1200px;
+}
+.gallery{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.frame{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px);
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="box"></div>
+        <div class="inputs-wrapper">
+            <input type="range" name="x" id="x" value="0">
+            <input type="range" name="y" id="y" value="0">
+            <input type="range" name="blur" id="blur" value="8">
+            <input type="range" name="spread" id="spread" value="4">
+        </div>
+        <div>
+            box-shadow: <span class="values">0px 0px 8px 4px</span>
+        </div>
+        <input type="color" name="color" id="color">
+        <datalist for="color">
+            <option value="#000000">black</option>
+            <option value="#ffffff">white</option>
+        </datalist>
+        <button>Inset</button>
+    </main>
+</body>
+</html>
