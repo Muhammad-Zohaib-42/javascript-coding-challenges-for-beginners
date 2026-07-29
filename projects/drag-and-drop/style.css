@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+}
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.box{
+    height: 200px;
+    aspect-ratio: 1;
+    background-color: white;
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.box.highlight{
+    background-color: green;
+    border: 2px dashed white;
+    transform: scale(1.05);
+}
+.frame{
+    height: 100%;
+    width: 100%;
+    background-image: url("../image-hover-effect/images/lake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(2);
+}

@@ -1,25 +1,14 @@
+const controls = document.querySelectorAll("button")
 const gallery = document.querySelector(".gallery")
 
 let currentIndex = 0
-let intervalId = null
 
-function startRotation() {
-    intervalId = setInterval(() => {
-        currentIndex++
+controls.forEach(control => {
+    control.addEventListener("click", () => {
+        const controlName = control.innerText
+
+        controlName == "Next" ? currentIndex-- : currentIndex++
+
         gallery.style.transform = `rotateY(${currentIndex * 60}deg)`
-    }, 1500);
-}
-
-function stopRotation() {
-    clearInterval(intervalId)
-}
-
-startRotation()
-
-gallery.addEventListener("mouseenter", () => {
-    stopRotation()
-})
-
-gallery.addEventListener("mouseleave", () => {
-    startRotation()
+    })
 })
