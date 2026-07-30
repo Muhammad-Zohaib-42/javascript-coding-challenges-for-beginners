@@ -8,6 +8,9 @@ body{
     height:100%;
     width:100%;
 }
+body{
+    cursor: none;
+}
 
 .custom-cursor{
     height:8px;

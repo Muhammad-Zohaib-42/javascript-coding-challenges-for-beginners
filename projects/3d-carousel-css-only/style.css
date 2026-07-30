@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: rgb(26, 25, 25);
+    color: ghostwhite;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+}
+
+.card{
+    height: 260px;
+    width: 250px;
+    background-image: url(../image-hover-effect/images/lake.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: saturate(2);
+    -webkit-box-reflect: below 6px linear-gradient(transparent 45%, rgba(255,255,255,.12));
+}

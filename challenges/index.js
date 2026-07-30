@@ -206,5 +206,3 @@ function bigCounting(number) {
 
     console.log(binary, bitCount)
 }
-
-bigCounting(9)
